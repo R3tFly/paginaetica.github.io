@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Crucigrama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">Ética Profesional</div>
+        <button class="menu-btn" onclick="window.location.href='index.html'">Menú</button>
+        <div class="header-right" id="timer">00:30</div>
+    </header>
+    <main>
+        <h2>Ejercicio de Crucigrama</h2>
+        <div class="crossword-container">
+            <table class="crossword">
+                <tr>
+                    <td class="filled">1</td>
+                    <td class="cell" data-answer="H"></td>
+                    <td class="cell" data-answer="O"></td>
+                    <td class="cell" data-answer="N"></td>
+                    <td class="cell" data-answer="O"></td>
+                    <td class="cell" data-answer="R"></td>
+                </tr>
+                <tr>
+                    <td class="filled">2</td>
+                    <td class="cell" data-answer="I"></td>
+                    <td class="cell" data-answer="N"></td>
+                    <td class="cell" data-answer="T"></td>
+                    <td class="cell" data-answer="E"></td>
+                    <td class="cell" data-answer="G"></td>
+                    <td class="cell" data-answer="R"></td>
+                    <td class="cell" data-answer="I"></td>
+                    <td class="cell" data-answer="D"></td>
+                    <td class="cell" data-answer="A"></td>
+                    <td class="cell" data-answer="D"></td>
+                </tr>
+                <tr>
+                    <td class="filled">3</td>
+                    <td class="cell" data-answer="R"></td>
+                    <td class="cell" data-answer="E"></td>
+                    <td class="cell" data-answer="S"></td>
+                    <td class="cell" data-answer="P"></td>
+                    <td class="cell" data-answer="E"></td>
+                    <td class="cell" data-answer="T"></td>
+                    <td class="cell" data-answer="O"></td>
+                </tr>
+            </table>
+            <button class="complete-btn" onclick="checkCrossword()">Completar</button>
+        </div>
+        <div class="clues">
+            <h3>Pistas</h3>
+            <p><strong>1.</strong> Valor ético relacionado con rectitud y buenas acciones.</p>
+            <p><strong>2.</strong> Principio de ser moral y éticamente correcto.</p>
+            <p><strong>3.</strong> Actitud que demuestra consideración y valor a los demás.</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

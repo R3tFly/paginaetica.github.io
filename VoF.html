@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Verdadero o Falso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">Ética Profesional</div>
+        <button class="menu-btn" onclick="window.location.href='index.html'">Menú</button>
+        <div class="header-right" id="timer">00:30</div>
+    </header>
+    <main>
+        <h2>Ejercicio de Verdadero o Falso</h2>
+        <div class="statement-container">
+            <div class="statement">
+                <p>1. La ética profesional implica que los ingenieros de software deben priorizar el beneficio económico sobre la seguridad de los usuarios.</p>
+                <button class="option" onclick="selectAnswer(this, 'true')">Verdadero</button>
+                <button class="option" onclick="selectAnswer(this, 'false')">Falso</button>
+            </div>
+            <div class="statement">
+                <p>2. El código ético establece que los ingenieros deben ser honestos y transparentes en la comunicación de problemas técnicos que afecten la seguridad.</p>
+                <button class="option" onclick="selectAnswer(this, 'true')">Verdadero</button>
+                <button class="option" onclick="selectAnswer(this, 'false')">Falso</button>
+            </div>
+            <div class="statement">
+                <p>3. En el caso de Safe Skies, Wayne Davidson opta por aprobar el sistema con un error para evitar retrasos en la entrega.</p>
+                <button class="option" onclick="selectAnswer(this, 'true')">Verdadero</button>
+                <button class="option" onclick="selectAnswer(this, 'false')">Falso</button>
+            </div>
+            <div class="statement">
+                <p>4. Un ingeniero de software puede justificar el uso de software sin licencia si el cliente es importante para la empresa.</p>
+                <button class="option" onclick="selectAnswer(this, 'true')">Verdadero</button>
+                <button class="option" onclick="selectAnswer(this, 'false')">Falso</button>
+            </div>
+            <div class="statement">
+                <p>5. El objetivo principal del código ético es proteger la integridad de los profesionales y la seguridad del público.</p>
+                <button class="option" onclick="selectAnswer(this, 'true')">Verdadero</button>
+                <button class="option" onclick="selectAnswer(this, 'false')">Falso</button>
+            </div>
+        </div>
+        <button class="complete-btn" onclick="checkTrueFalseAnswers()">Completar</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Selección Múltiple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <p>Ética profesional</p>
+        </div>
+        <div class="header-center">
+            <button class="menu-btn" onclick="window.location.href='index.html'">Menú</button>
+        </div>
+        <div class="header-right">
+            <span>Tiempo restante: <span id="timer">00:30</span></span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2>Ejercicio de Selección Múltiple</h2>
+
+        <div class="question-container">
+            <div class="question">
+                <p>1. ¿Cuál es uno de los valores éticos fundamentales en la institución?</p>
+                <div class="option-group">
+                    <label><input type="radio" name="question1" value="honestidad"> Honorabilidad</label>
+                    <label><input type="radio" name="question1" value="irrespeto"> Competencia</label>
+                    <label><input type="radio" name="question1" value="negligencia"> Desinterés</label>
+                    <label><input type="radio" name="question1" value="irrespeto"> Ambición</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. ¿Qué valor fomenta la igualdad de derechos y obligaciones?</p>
+                <div class="option-group">
+                    <label><input type="radio" name="question2" value="justicia"> Justicia</label>
+                    <label><input type="radio" name="question2" value="engaño"> Engaño</label>
+                    <label><input type="radio" name="question2" value="egoismo"> Egoísmo</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. ¿Cuál es una muestra de integridad en el trabajo?</p>
+                <div class="option-group">
+                    <label><input type="radio" name="question3" value="confianza"> Generar confianza</label>
+                    <label><input type="radio" name="question3" value="mentira"> Mentir</label>
+                    <label><input type="radio" name="question3" value="deshonestidad"> Deshonestidad</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="complete-btn" onclick="checkMultipleChoiceAnswers()">Completar</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

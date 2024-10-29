@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ética Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">Ética Profesional</div>
+        <button class="menu-btn" onclick="window.location.href='index.html'">Menú</button>
+        <div class="header-right" id="timer">00:30</div>
+    </header>
+    <main>
+        <h2>Arrastra la palabra correcta al concepto</h2>
+        <div class="word-container">
+            <div class="word" draggable="true" ondragstart="drag(event)">Honestidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Responsabilidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Justicia</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Respeto</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Integridad</div>
+        </div>
+
+        <!-- Múltiples conceptos -->
+        <div class="concept-container" id="concept1" ondrop="drop(event, 'concept1')" ondragover="allowDrop(event)">
+            <p>Concepto de ética 1:</p>
+            <p class="concept-text" id="concept-text1"></p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="word-container">
+            <div class="word" draggable="true" ondragstart="drag(event)">Honestidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Responsabilidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Justicia</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Respeto</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Integridad</div>
+        </div>
+
+        <div class="concept-container" id="concept2" ondrop="drop(event, 'concept2')" ondragover="allowDrop(event)">
+            <p>Concepto de ética 2:</p>
+            <p class="concept-text" id="concept-text2"></p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="word-container">
+            <div class="word" draggable="true" ondragstart="drag(event)">Honestidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Responsabilidad</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Justicia</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Respeto</div>
+            <div class="word" draggable="true" ondragstart="drag(event)">Integridad</div>
+        </div>
+
+        <div class="concept-container" id="concept3" ondrop="drop(event, 'concept3')" ondragover="allowDrop(event)">
+            <p>Concepto de ética 3:</p>
+            <p class="concept-text" id="concept-text3"></p>
+        </div>
+        
+        <button class="complete-btn" onclick="checkAnswers()">Completar</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
