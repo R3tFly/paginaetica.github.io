@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Ejercicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">Ética Profesional</div>
+        <button class="menu-btn" onclick="window.location.href='index.html'">Menú</button>
+    </header>
+    <main>
+        <h2>Resultado del Ejercicio</h2>
+        <div class="result-container">
+            <p id="score-display">Puntuación: </p>
+            <p id="correct-display">Respuestas Correctas: </p>
+            <p id="incorrect-display">Respuestas Incorrectas: </p>
+        </div>
+    </main>
+    <script>
+        // Extrae los parámetros de la URL y muestra los resultados
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("score-display").textContent += `${params.get("score")}/10`;
+        document.getElementById("correct-display").textContent += params.get("correct");
+        document.getElementById("incorrect-display").textContent += params.get("incorrect");
+    </script>
+</html>
