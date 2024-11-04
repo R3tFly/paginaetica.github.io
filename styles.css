@@ -328,3 +328,23 @@ main {
 .complete-btn:hover {
     background-color: #218838;
 }
+
+/* Estilo para el header */
+.header, .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+}
+
+.footer {
+    
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+

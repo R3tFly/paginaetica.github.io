@@ -3,8 +3,20 @@ function displayScore(score, correctCount, incorrectCount) {
     window.location.href = `Resultado.html?score=${score}&correct=${correctCount}&incorrect=${incorrectCount}`;
 }
 
+// Obtiene el nombre del archivo HTML actual
+const currentPage = window.location.pathname.split("/").pop();
+
+// Define el tiempo inicial según la página
+let timeLeft;
+if (currentPage === "Arrastrar.html") {
+    timeLeft = 30;  // Tiempo para pagina1.html
+} else if (currentPage === "Multiple.html") {
+    timeLeft = 30;   // Tiempo para pagina2.html
+} else {
+    timeLeft = 60;   // Tiempo predeterminado
+}
+
 // Temporizador de cuenta regresiva
-let timeLeft = 3;
 const timerElement = document.getElementById("timer");
 const countdown = setInterval(() => {
     timeLeft--;
@@ -20,6 +32,7 @@ const countdown = setInterval(() => {
         }
     }
 }, 1000);
+
 
 // Arrastrar y Soltar
 const correctWords = {
@@ -86,31 +99,34 @@ function checkTrueFalseAnswers() {
     displayScore(score.toFixed(1), correctCount, trueFalseAnswers.length - correctCount);
 }
 
-// Selección Múltiple
-const multipleChoiceAnswers = ["A", "B", "C", "A"];
-const userMultipleChoiceAnswers = [];
+// Respuestas correctas para cada pregunta
+const multipleChoiceAnswers = ["A", "D", "B"]; // Define la respuesta correcta para cada pregunta
 
-function selectMultipleChoiceAnswer(questionIndex, answer) {
-    userMultipleChoiceAnswers[questionIndex] = answer;
-
-    const options = document.querySelectorAll(`#question${questionIndex} .option`);
-    options.forEach(option => option.classList.remove("selected"));
-
-    const selectedOption = document.querySelector(`#question${questionIndex} .option-${answer}`);
-    selectedOption.classList.add("selected");
-}
-
-// Verificar respuestas de Selección Múltiple
+// Función para verificar respuestas de Selección Múltiple
 function checkMultipleChoiceAnswers() {
     let correctCount = 0;
+
+    // Recorre cada pregunta y verifica la respuesta seleccionada
     for (let i = 0; i < multipleChoiceAnswers.length; i++) {
-        if (userMultipleChoiceAnswers[i] === multipleChoiceAnswers[i]) {
+        const selectedOption = document.querySelector(`input[name="question${i + 1}"]:checked`);
+        
+        // Verifica si la respuesta seleccionada es correcta
+        if (selectedOption && selectedOption.value === multipleChoiceAnswers[i]) {
             correctCount++;
         }
     }
+
+    // Calcula el puntaje y muestra en una página de resultados
     const score = (correctCount / multipleChoiceAnswers.length) * 10;
     displayScore(score.toFixed(1), correctCount, multipleChoiceAnswers.length - correctCount);
 }
+
+// Función para mostrar la puntuación en una página aparte
+function displayScore(score, correctCount, incorrectCount) {
+    window.location.href = `Resultado.html?score=${score}&correct=${correctCount}&incorrect=${incorrectCount}`;
+}
+
+
 
 // Crucigrama
 function checkCrossword() {
