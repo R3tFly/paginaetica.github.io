@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de PDF</title>
+    <link rel="stylesheet" href="/Ética Profesional - Pagina/styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .pdf-container {
+            width: 99%;
+            height: 99vh;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+            margin-top: 0px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">Ética Profesional</div>
+        <button class="menu-btn" onclick="window.location.href='/Ética Profesional - Pagina/index.html'">Menú</button>
+        
+    </header>
+    <div class="pdf-container">
+        <iframe src="/Ética Profesional - Pagina/HTML/Normas.pdf" title="Visualizador de PDF"></iframe>
+    </div>
+</body>
+</html>
